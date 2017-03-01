@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Page about me</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="vendor/bootstrap/css/theme.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">Page about me</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#sortarray">Sort array</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About me</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/profile.png" alt="">
+                    <div class="intro-text">
+                        <span class="name">Page about me</span>
+                        <hr class="star-light">
+                        <span class="skills">I don't like sharing my photo, so I use this photo from my social page from VK</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sort array Grid Section -->
+    <section id="sortarray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Sort array</h2>
+                    <hr class="star-primary">
+                    <div class="row">
+                        <div class="col-lg-4 col-lg-offset-2">
+                            <script  type="text/javascript">
+                                function randomInteger(min, max) {
+                                    var rand = min + Math.random() * (max - min)
+                                    rand = Math.round(rand);
+                                    return rand;
+                                }
+                                var m = [];
+                                for (var i = 0; i<10; i++ ){
+                                    m[i]=randomInteger(1, 100);
+                                }
+                                document.write('<p>Input array:</p><p>'+m+'</p>');
+                            </script>
+                        </div>
+                        <div class="col-lg-4">
+                            <script  type="text/javascript">
+                                for (var i = 0; i < 9; i++) {
+                                    var m_min = m[i];
+                                    for (var j = i + 1; j < 10; j++) {
+                                        if (m[j] > m_min) {
+                                            var mm = m[i];
+                                            m_min = m[j];
+                                            m[i] = m_min;
+                                            m[j] = mm;
+                                        }
+                                    }
+                                }
+                                document.write('<p>Output array:</p><p>'+m+'</p>');
+                            </script>
+                        </div>
+
+                    </div>
+                    <div>
+                        <p>*Please use key F5 to load new array</p>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About me</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p>Hello, my name  Oleh. I am 22 year old. I ended Ternopil National Economic University this year.I can build simple site with use css and html and bootstrap. </p>
+                </div>
+                <div class="col-lg-4">
+                    <p> I have seen this advertisement in social network VK. I hope you like my video with cats in bottom of this page :) Goodbye!</p>
+                </div>
+
+            </div>
+            <div style="text-align: center;">
+                <p>This is my favorite song</p>
+                <iframe width="420" height="315"
+                        src="https://www.youtube.com/embed/9mceFBUhGyQ">
+
+                </iframe>
+            </div>
+
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; PageAboutMe.test.com 2017
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+
+
+
+</body>
+
+</html>
